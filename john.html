@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tenor-gif-embed {
+      margin-top: 300px;
+      margin-left: 95px;
+    }
+    .yes {
+      background-color: green;
+      color: white;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-left: 150px;
+      font-size: 20px;
+      border: none;
+    }
+    .no {
+      background-color: red;
+      color: white;
+      margin-top: 20px;
+      margin-right: 20px;
+      font-size: 20px;
+      border: none;
+    }
+    .text {
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="gifContainer" class="tenor-gif-embed" data-postid="21774878" data-share-method="host" data-aspect-ratio="1.23552" data-width="50%"></div>
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  
+  <p id="text" class="text">Libre mo ba si mingming?</p>
+  <button id="yes" class="yes">YES</button>
+  <button id="no" class="no">NO</button>
+
+  <script>
+    document.getElementById('yes').addEventListener('click', function() {
+      // Change the GIF by updating the inner HTML of the container
+      var newGifHTML = '<div class="tenor-gif-embed" data-postid="167091304324863657" data-share-method="host" data-aspect-ratio="1.05036" data-width="100%"><a href="https://tenor.com/view/peach-goma-love-rub-gif-167091304324863657">Peach Goma Love Sticker</a> from <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a></div>';
+      document.getElementById('gifContainer').innerHTML = newGifHTML;
+
+      // Re-load the tenor embed script
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://tenor.com/embed.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      // Change the text
+      document.getElementById('text').textContent = 'Yeeheyyyy!!!';
+
+      // Hide the button
+      this.style.display = 'none';
+      no.style.display = 'none';
+    });
+
+    document.getElementById('no').addEventListener('click', function() {
+      // Change the GIF by updating the inner HTML of the container
+      var newGifHTML = '<div class="tenor-gif-embed" data-postid="25005894" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/tkthao219-peach-goma-gif-25005894">Tkthao219 Peach Sticker</a>from <a href="https://tenor.com/search/tkthao219-stickers">Tkthao219 Stickers</a></div>';
+      document.getElementById('gifContainer').innerHTML = newGifHTML;
+
+      // Re-load the tenor embed script
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://tenor.com/embed.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      // Change the text
+      document.getElementById('text').textContent = 'Wag ka na punta dito sa bahay pakalmot kita dito';
+
+      // Hide the button
+      yes.style.display = 'none';
+      this.style.display = 'none';
+    });
+  </script>
+  
+</body>
+</html>
